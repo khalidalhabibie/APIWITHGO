@@ -27,6 +27,10 @@ func NewUserRepository() UserRepository {
 	}
 }
 
+func (db *userRepository) AddUser(user model.User) (model.User, error) {
+	return user, db.connection.Create(&user).Error
+}
+
 func (db *userRepository) GetUser(id int) (user model.User, err error) {
 	return user, db.connection.First(&user, id).Error
 }
@@ -39,9 +43,7 @@ func (db *userRepository) GetAllUser() (users []model.User, err error) {
 	return users, db.connection.Find(&users).Error
 }
 
-func (db *userRepository) AddUser(user model.User) (model.User, error) {
-	return user, db.connection.Create(&user).Error
-}
+
 
 func (db *userRepository) UpdateUser(user model.User) (model.User, error) {
 	if err := db.connection.First(&user, user.ID).Error; err != nil {
