@@ -3,7 +3,8 @@ package main
 import (
     "github.com/joho/godotenv"
     "log"
-    "os"
+    "fmt"
+    
 )
 
 func main() {
@@ -12,8 +13,8 @@ func main() {
     log.Fatal("Error loading .env file")
   }
 
-  	os.Getenv("DB_USERNAME")
-	os.Getenv("DB_NAME")
+  fmt.Println("Starts")
 
+	log.Fatal(route.RunAPI(":8090"))
   
 }
