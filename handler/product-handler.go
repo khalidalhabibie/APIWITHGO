@@ -4,8 +4,11 @@ package handler
 import (
 	"net/http"
 	"strconv"
-	"../model"
-	"../repository"
+	//"../model"
+	//"../repository"
+	"github.com/khalid/apiWithGO/model"
+	"github.com/khalid/apiWithGO/repository"
+	
 	"github.com/gin-gonic/gin"
 )
 

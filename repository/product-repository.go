@@ -2,7 +2,8 @@ package repository
 
 import (
 	"gorm.io/gorm"
-	"../model"
+	//"../model"
+	"github.com/khalid/apiWithGO/model"
 )
 
 type ProductRepository interface {
