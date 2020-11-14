@@ -3,10 +3,12 @@ package middleware
 import (
 	"fmt"
 	"net/http"
-	"../handler"
+	//"../handler"
+	"github.com/khalid/apiWithGO/handler"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 )
+
 
 
 func AuthorizeMiddleware() gin.HandlerFunc {
