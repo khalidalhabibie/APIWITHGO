@@ -6,9 +6,9 @@ import (
 	"strconv"
 
 
+	"github.com/gin-gonic/gin"
 	"github.com/khalidalhabibie/APIWITHGO/model"
 	"github.com/khalidalhabibie/APIWITHGO/repository"
-	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
 )
 
@@ -72,11 +72,16 @@ func (h *userHandler) GetUser(ctx *gin.Context) {
 
 func (h *userHandler) SignInUser(ctx *gin.Context) {
 	var user model.User
+	
+	
 	if err := ctx.ShouldBindJSON(&user); err != nil {
-		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		//ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		
 	}
-
+	
+		
 	dbUser, err := h.repo.GetByEmail(user.Email)
+	
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"msg": "User Not Found"})
 		return
