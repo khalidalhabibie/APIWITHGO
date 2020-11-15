@@ -5,11 +5,9 @@ import (
 	"fmt"
 	"os"
 	"time"
-
-	
 )
 
-//GenerateToken -> generates token
+
 func GenerateToken(userid uint) string {
 	claims := jwt.MapClaims{
 		"exp":    time.Now().Add(time.Hour * 3).Unix(),

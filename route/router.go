@@ -1,13 +1,19 @@
 package route
 
-import(
+import (
 	"net/http"
+
+	//"../handler"
+	//"../middleware"
+	//"github.com/khalid/apiWithGO/handler"
+	//"github.com/khalid/apiWithGO/middlerware"
+	"github.com/khalidalhabibie/APIWITHGO/handler"
+	"github.com/khalidalhabibie/APIWITHGO/middleware"
+
 	"github.com/gin-gonic/gin"
-	"../handler"
-	"../middleware"
 )
 
-func RunAPI(address string) error {
+func Run(address string) error {
 
 	userHandler := handler.NewUserHandler()
 	productHandler := handler.NewProductHandler()
@@ -27,7 +33,7 @@ func RunAPI(address string) error {
 		userRoutes.POST("/signin", userHandler.SignInUser)
 	}
 
-	userProtectedRoutes := apiRoutes.Group("/users",middleware.AuthorizeMiddleware())
+	userProtectedRoutes := apiRoutes.Group("/users", middleware.AuthorizeMiddleware())
 	{
 		userProtectedRoutes.GET("/", userHandler.GetAllUser)
 		userProtectedRoutes.GET("/:user", userHandler.GetUser)
@@ -49,7 +55,6 @@ func RunAPI(address string) error {
 	{
 		transactionProtectedRoutes.POST("/product/:product/quantity/:quantity", transactionHandler.TransactionProduct)
 	}
-
 
 	return r.Run(address)
 

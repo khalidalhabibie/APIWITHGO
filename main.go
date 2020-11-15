@@ -1,20 +1,21 @@
 package main
 
 import (
-    "github.com/joho/godotenv"
-    "log"
-    "fmt"
-    
+	"fmt"
+	"github.com/joho/godotenv"
+	"log"
+	//"./route"
+	//"github.com/khalid/apiWithGO/route"
+	//"route"
+	"github.com/khalidalhabibie/APIWITHGO/route"
 )
 
 func main() {
-  err := godotenv.Load()
-  if err != nil {
-    log.Fatal("Error loading .env file")
-  }
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+	fmt.Println("Starts")
+	log.Fatal(route.Run(":8080"))
 
-  fmt.Println("Starts")
-
-	log.Fatal(route.RunAPI(":8090"))
-  
 }
