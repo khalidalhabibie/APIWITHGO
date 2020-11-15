@@ -3,9 +3,9 @@ package middleware
 import (
 	"fmt"
 	"net/http"
-	//"../handler"
-	//"github.com/khalid/apiWithGO/handler"
+
 	"github.com/khalidalhabibie/APIWITHGO/handler"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 )
