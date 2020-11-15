@@ -5,10 +5,10 @@ import(
 	"log"
 	"gorm.io/gorm"
 	"gorm.io/driver/mysql"
-	//"../model"
-	//"github.com/khalid/apiWithGO/model"
+
 	"github.com/khalidalhabibie/APIWITHGO/model"
 	"fmt"
+
 	
 )
 
@@ -23,7 +23,6 @@ func DB() *gorm.DB{
 
 
 	//dsn := username + ":" + password + "@/" + dbname + "?charset=utf8&parseTime=True&loc=Local"
-	//DBURL := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", DbUser, DbPassword, DbHost, DbPort, DbName)
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=utf8&parseTime=True&loc=Local", username,password, host, port, dbname)
 	db,err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 

@@ -3,12 +3,11 @@ package route
 import (
 	"net/http"
 
-	//"../handler"
-	//"../middleware"
-	//"github.com/khalid/apiWithGO/handler"
-	//"github.com/khalid/apiWithGO/middlerware"
+	
 	"github.com/khalidalhabibie/APIWITHGO/handler"
 	"github.com/khalidalhabibie/APIWITHGO/middleware"
+
+
 
 	"github.com/gin-gonic/gin"
 )
