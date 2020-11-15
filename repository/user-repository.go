@@ -1,8 +1,9 @@
 package repository
 
 import(
-	//"../model"
-	"github.com/khalid/apiWithGO/model"
+
+	"github.com/khalidalhabibie/APIWITHGO/model"
+
 	"gorm.io/gorm"
 )
 

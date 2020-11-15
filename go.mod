@@ -1,4 +1,6 @@
-module apiWithGO
+//module apiWithGO
+module github.com/khalidalhabibie/APIWITHGO
+
 
 go 1.15
 

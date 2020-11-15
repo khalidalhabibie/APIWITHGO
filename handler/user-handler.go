@@ -5,10 +5,9 @@ import (
 	"net/http"
 	"strconv"
 
-	//"../model"
-	//"../repository"
-	"github.com/khalid/apiWithGO/model"
-	"github.com/khalid/apiWithGO/repository"
+
+	"github.com/khalidalhabibie/APIWITHGO/model"
+	"github.com/khalidalhabibie/APIWITHGO/repository"
 	"github.com/gin-gonic/gin"
 	"golang.org/x/crypto/bcrypt"
 )
