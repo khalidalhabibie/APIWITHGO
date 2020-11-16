@@ -4,10 +4,9 @@ import (
 	"fmt"
 	"github.com/joho/godotenv"
 	"log"
-	//"./route"
-	//"github.com/khalid/apiWithGO/route"
-	//"route"
+
 	"github.com/khalidalhabibie/APIWITHGO/route"
+
 )
 
 func main() {

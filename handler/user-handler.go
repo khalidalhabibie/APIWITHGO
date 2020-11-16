@@ -5,8 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	//"../model"
-	//"../repository"
+
 	"github.com/gin-gonic/gin"
 	"github.com/khalidalhabibie/APIWITHGO/model"
 	"github.com/khalidalhabibie/APIWITHGO/repository"
